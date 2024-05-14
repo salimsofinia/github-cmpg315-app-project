@@ -17,6 +17,7 @@ namespace MessagingAppGoup11
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmConnect());
+            //Application.Run(new frmChats());
         }
     }
 }

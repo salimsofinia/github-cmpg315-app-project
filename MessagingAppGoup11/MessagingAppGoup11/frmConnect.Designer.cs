@@ -39,6 +39,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblHelp = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -79,7 +80,7 @@
             this.pbxLogo.Image = global::MessagingAppGoup11.Properties.Resources.WiiChatLogo;
             this.pbxLogo.Location = new System.Drawing.Point(0, 0);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(93, 84);
+            this.pbxLogo.Size = new System.Drawing.Size(90, 90);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxLogo.TabIndex = 4;
             this.pbxLogo.TabStop = false;
@@ -186,6 +187,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label lblHelp;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
