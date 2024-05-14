@@ -16,5 +16,10 @@ namespace MessagingAppGoup11
         {
             InitializeComponent();
         }
+
+        private void frmChats_Deactivate(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -69,5 +69,15 @@ namespace MessagingAppGoup11.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WiiChatLogo {
+            get {
+                object obj = ResourceManager.GetObject("WiiChatLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

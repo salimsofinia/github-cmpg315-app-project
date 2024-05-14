@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WiiChat.png" />
+    <None Include="Resources\WiiChatLogo.png" />
     <Content Include="WiiChat.png" />
     <Content Include="WiiChatLogo.png" />
   </ItemGroup>
