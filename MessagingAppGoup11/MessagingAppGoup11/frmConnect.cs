@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MessagingAppGoup11
 {
@@ -18,7 +17,8 @@ namespace MessagingAppGoup11
             InitializeComponent();
         }
 
-        public string username { get; set; }
+        public string username = "";
+
         private void frmConnect_Enter(object sender, EventArgs e)
         {
             errorProvider1.Clear();
@@ -29,17 +29,20 @@ namespace MessagingAppGoup11
         {
             try
             {
-                if(!String.IsNullOrWhiteSpace(txtUsername.Text))
+                if (!String.IsNullOrWhiteSpace(txtUsername.Text))
                 {
+                    // Save the username
                     username = txtUsername.Text;
-                    //create instance of Chats form and show
-                    frmChats chatsForm = new frmChats();
+
+                    // Create instance of Chats form, pass the username, and show
+                    frmChats chatsForm = new frmChats(username);
                     this.Hide();
                     chatsForm.ShowDialog();
+                    this.Show(); // Show this form again after closing frmChats if needed
                 }
                 else
                 {
-                    //show error provider
+                    // Show error provider
                     errorProvider1.SetError(txtUsername, "A username is required!");
                 }
             }
