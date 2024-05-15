@@ -9,3 +9,14 @@ C:\Users\salim\Documents\Academics\GitHub\github-cmpg315-app-project\MessagingAp
 C:\Users\salim\Documents\Academics\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.exe
 C:\Users\salim\Documents\Academics\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.pdb
 C:\Users\salim\Documents\Academics\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.frmChats.resources
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\bin\Debug\MessagingAppGoup11.exe.config
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\bin\Debug\MessagingAppGoup11.exe
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\bin\Debug\MessagingAppGoup11.pdb
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.csproj.AssemblyReference.cache
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.frmChats.resources
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.frmConnect.resources
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.Properties.Resources.resources
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.csproj.GenerateResource.cache
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.csproj.CoreCompileInputs.cache
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.exe
+C:\Users\sysop\Dropbox\PC\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.pdb

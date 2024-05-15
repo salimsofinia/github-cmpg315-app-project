@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.txtMessageBox = new System.Windows.Forms.TextBox();
             this.rtbOutput = new System.Windows.Forms.RichTextBox();
             this.rdoPtpChat = new System.Windows.Forms.RadioButton();
             this.rdoGlobalChat = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lstConnectedUsers = new System.Windows.Forms.ListBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.txtMessageBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtReceiverIP = new System.Windows.Forms.TextBox();
             this.txtReceiverPort = new System.Windows.Forms.TextBox();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.txtReceiverIP = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,26 +61,17 @@
             this.panel1.Size = new System.Drawing.Size(1330, 117);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btnClose
             // 
-            this.panel2.BackColor = System.Drawing.Color.Turquoise;
-            this.panel2.Controls.Add(this.btnSend);
-            this.panel2.Controls.Add(this.txtMessageBox);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 647);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1330, 100);
-            this.panel2.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MessagingAppGoup11.Properties.Resources.WiiChatLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(1198, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(132, 56);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblTitle
             // 
@@ -92,11 +83,55 @@
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "WiiChat";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MessagingAppGoup11.Properties.Resources.WiiChatLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Turquoise;
+            this.panel2.Controls.Add(this.btnSend);
+            this.panel2.Controls.Add(this.txtMessageBox);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 641);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1330, 100);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnSend
+            // 
+            this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.Location = new System.Drawing.Point(1131, 6);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(166, 66);
+            this.btnSend.TabIndex = 7;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // txtMessageBox
+            // 
+            this.txtMessageBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMessageBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMessageBox.Location = new System.Drawing.Point(85, 21);
+            this.txtMessageBox.Name = "txtMessageBox";
+            this.txtMessageBox.Size = new System.Drawing.Size(985, 38);
+            this.txtMessageBox.TabIndex = 8;
+            // 
             // rtbOutput
             // 
             this.rtbOutput.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rtbOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbOutput.Location = new System.Drawing.Point(606, 6);
+            this.rtbOutput.Location = new System.Drawing.Point(606, 3);
             this.rtbOutput.Name = "rtbOutput";
             this.rtbOutput.Size = new System.Drawing.Size(712, 508);
             this.rtbOutput.TabIndex = 2;
@@ -126,6 +161,7 @@
             this.rdoGlobalChat.TabStop = true;
             this.rdoGlobalChat.Text = "Global Chat";
             this.rdoGlobalChat.UseVisualStyleBackColor = true;
+            this.rdoGlobalChat.CheckedChanged += new System.EventHandler(this.rdoGlobalChat_CheckedChanged);
             // 
             // label1
             // 
@@ -147,28 +183,6 @@
             this.lstConnectedUsers.Size = new System.Drawing.Size(248, 345);
             this.lstConnectedUsers.TabIndex = 6;
             // 
-            // btnSend
-            // 
-            this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSend.Location = new System.Drawing.Point(1131, 6);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(166, 66);
-            this.btnSend.TabIndex = 7;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            // 
-            // txtMessageBox
-            // 
-            this.txtMessageBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMessageBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMessageBox.Location = new System.Drawing.Point(85, 21);
-            this.txtMessageBox.Name = "txtMessageBox";
-            this.txtMessageBox.Size = new System.Drawing.Size(985, 38);
-            this.txtMessageBox.TabIndex = 8;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Turquoise;
@@ -182,47 +196,35 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 117);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1330, 530);
+            this.panel3.Size = new System.Drawing.Size(1330, 524);
             this.panel3.TabIndex = 9;
-            // 
-            // txtReceiverIP
-            // 
-            this.txtReceiverIP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtReceiverIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceiverIP.Location = new System.Drawing.Point(338, 217);
-            this.txtReceiverIP.Name = "txtReceiverIP";
-            this.txtReceiverIP.Size = new System.Drawing.Size(229, 38);
-            this.txtReceiverIP.TabIndex = 9;
             // 
             // txtReceiverPort
             // 
             this.txtReceiverPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtReceiverPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceiverPort.Location = new System.Drawing.Point(338, 274);
+            this.txtReceiverPort.Location = new System.Drawing.Point(338, 268);
             this.txtReceiverPort.Name = "txtReceiverPort";
             this.txtReceiverPort.Size = new System.Drawing.Size(229, 38);
             this.txtReceiverPort.TabIndex = 10;
             // 
-            // btnClose
+            // txtReceiverIP
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(1198, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(132, 56);
-            this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.txtReceiverIP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtReceiverIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceiverIP.Location = new System.Drawing.Point(338, 211);
+            this.txtReceiverIP.Name = "txtReceiverIP";
+            this.txtReceiverIP.Size = new System.Drawing.Size(229, 38);
+            this.txtReceiverIP.TabIndex = 9;
             // 
             // frmChats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1330, 747);
+            this.ClientSize = new System.Drawing.Size(1330, 741);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -233,9 +235,9 @@
             this.Deactivate += new System.EventHandler(this.frmChats_Deactivate);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);

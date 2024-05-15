@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MessagingAppGoup11
 {
@@ -17,6 +18,7 @@ namespace MessagingAppGoup11
             InitializeComponent();
         }
 
+        public string username { get; set; }
         private void frmConnect_Enter(object sender, EventArgs e)
         {
             errorProvider1.Clear();
@@ -29,6 +31,7 @@ namespace MessagingAppGoup11
             {
                 if(!String.IsNullOrWhiteSpace(txtUsername.Text))
                 {
+                    username = txtUsername.Text;
                     //create instance of Chats form and show
                     frmChats chatsForm = new frmChats();
                     this.Hide();

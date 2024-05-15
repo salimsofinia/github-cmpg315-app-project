@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
-            this.btnConnect = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblIntro = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblHelp = new System.Windows.Forms.Label();
+            this.lblIntro = new System.Windows.Forms.Label();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.btnConnect = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
@@ -75,6 +75,27 @@
             this.panel1.Size = new System.Drawing.Size(460, 738);
             this.panel1.TabIndex = 4;
             // 
+            // lblHelp
+            // 
+            this.lblHelp.AutoSize = true;
+            this.lblHelp.BackColor = System.Drawing.SystemColors.Control;
+            this.lblHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHelp.Location = new System.Drawing.Point(67, 154);
+            this.lblHelp.Name = "lblHelp";
+            this.lblHelp.Size = new System.Drawing.Size(383, 17);
+            this.lblHelp.TabIndex = 6;
+            this.lblHelp.Text = "This username will be used to represent you to other users.";
+            // 
+            // lblIntro
+            // 
+            this.lblIntro.AutoSize = true;
+            this.lblIntro.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIntro.Location = new System.Drawing.Point(108, 21);
+            this.lblIntro.Name = "lblIntro";
+            this.lblIntro.Size = new System.Drawing.Size(342, 39);
+            this.lblIntro.TabIndex = 5;
+            this.lblIntro.Text = "Welcome to WiiChat!";
+            // 
             // pbxLogo
             // 
             this.pbxLogo.Image = global::MessagingAppGoup11.Properties.Resources.WiiChatLogo;
@@ -84,6 +105,14 @@
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxLogo.TabIndex = 4;
             this.pbxLogo.TabStop = false;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(12, 230);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(412, 39);
+            this.txtUsername.TabIndex = 2;
             // 
             // btnConnect
             // 
@@ -96,50 +125,17 @@
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
-            // txtUsername
-            // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(12, 230);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(412, 39);
-            this.txtUsername.TabIndex = 2;
-            // 
             // panel2
             // 
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.Turquoise;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(906, 0);
+            this.panel2.Location = new System.Drawing.Point(902, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(460, 738);
             this.panel2.TabIndex = 5;
-            // 
-            // lblIntro
-            // 
-            this.lblIntro.AutoSize = true;
-            this.lblIntro.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIntro.Location = new System.Drawing.Point(108, 21);
-            this.lblIntro.Name = "lblIntro";
-            this.lblIntro.Size = new System.Drawing.Size(342, 39);
-            this.lblIntro.TabIndex = 5;
-            this.lblIntro.Text = "Welcome to WiiChat!";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // lblHelp
-            // 
-            this.lblHelp.AutoSize = true;
-            this.lblHelp.BackColor = System.Drawing.SystemColors.Control;
-            this.lblHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHelp.Location = new System.Drawing.Point(67, 154);
-            this.lblHelp.Name = "lblHelp";
-            this.lblHelp.Size = new System.Drawing.Size(383, 17);
-            this.lblHelp.TabIndex = 6;
-            this.lblHelp.Text = "This username will be used to represent you to other users.";
             // 
             // button1
             // 
@@ -153,13 +149,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmConnect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MessagingAppGoup11.Properties.Resources.WiiChat;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1366, 738);
+            this.ClientSize = new System.Drawing.Size(1362, 738);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;

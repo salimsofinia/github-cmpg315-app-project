@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|c:\\users\\sysop\\dropbox\\pc\\documents\\github\\github-cmpg315-app-project\\messagingappgoup11\\messagingappgoup11\\frmchats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|solutionrelative:messagingappgoup11\\frmchats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\messagingappgoup11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|solutionrelative:messagingappgoup11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\messagingappgoup11\\frmchats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|solutionrelative:messagingappgoup11\\frmchats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\messagingappgoup11\\frmconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|solutionrelative:messagingappgoup11\\frmconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\messagingappgoup11\\frmconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{16FDB8A4-2B53-421F-A50F-B69815761F1F}|MessagingAppGoup11\\MessagingAppGoup11.csproj|solutionrelative:messagingappgoup11\\frmconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmConnect.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\frmConnect.cs",
+              "RelativeDocumentMoniker": "MessagingAppGoup11\\frmConnect.cs",
+              "ToolTip": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\frmConnect.cs [Design]",
+              "RelativeToolTip": "MessagingAppGoup11\\frmConnect.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T20:15:33.538Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmConnect.cs",
+              "DocumentMoniker": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\frmConnect.cs",
+              "RelativeDocumentMoniker": "MessagingAppGoup11\\frmConnect.cs",
+              "ToolTip": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\frmConnect.cs",
+              "RelativeToolTip": "MessagingAppGoup11\\frmConnect.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T20:15:33.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmChats.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\frmChats.cs",
+              "RelativeDocumentMoniker": "MessagingAppGoup11\\frmChats.cs",
+              "ToolTip": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\frmChats.cs [Design]",
+              "RelativeToolTip": "MessagingAppGoup11\\frmChats.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T20:15:33.745Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmChats.cs",
+              "DocumentMoniker": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\frmChats.cs",
+              "RelativeDocumentMoniker": "MessagingAppGoup11\\frmChats.cs",
+              "ToolTip": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\frmChats.cs",
+              "RelativeToolTip": "MessagingAppGoup11\\frmChats.cs",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAUwLEAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T20:15:34.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\Program.cs",
+              "RelativeDocumentMoniker": "MessagingAppGoup11\\Program.cs",
+              "ToolTip": "C:\\Users\\sysop\\Dropbox\\PC\\Documents\\GitHub\\github-cmpg315-app-project\\MessagingAppGoup11\\MessagingAppGoup11\\Program.cs",
+              "RelativeToolTip": "MessagingAppGoup11\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T20:15:35.45Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
