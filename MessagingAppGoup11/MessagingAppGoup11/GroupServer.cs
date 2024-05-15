@@ -13,6 +13,8 @@ namespace GServer
         private Thread[] clientThreads;
         private bool isRunning;
         private int clientCount;
+        private static string hostname = Dns.GetHostName();
+        private static string Ip = Dns.GetHostByName(hostname).AddressList[0].ToString();
 
         public GroupServer()
         {
@@ -27,12 +29,12 @@ namespace GServer
             try
             {
                 // Set up the server socket
-                IPAddress ipAddress = IPAddress.Any;
+                IPAddress ipAddress = IPAddress.Parse(Ip); ;
                 listener = new TcpListener(ipAddress, port);
 
                 // Start listening for incoming connections
                 listener.Start();
-                Console.WriteLine("Server started on port {0}", port);
+                Console.WriteLine("Server started on port {0}, {1}", ipAddress, port);
 
                 while (isRunning)
                 {

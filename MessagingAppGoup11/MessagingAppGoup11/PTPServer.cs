@@ -12,6 +12,8 @@ namespace PTPServer
         private TcpClient[] clients;
         private int clientCount;
         private bool isRunning;
+        private static string hostname = Dns.GetHostName();
+        private static string Ip = Dns.GetHostByName(hostname).AddressList[0].ToString();
 
         public PeerToPeerServer()
         {
@@ -25,7 +27,7 @@ namespace PTPServer
             try
             {
                 // Set up the server socket
-                IPAddress ipAddress = IPAddress.Parse("192.168.0.22");
+                IPAddress ipAddress = IPAddress.Parse(Ip);
                 listener = new TcpListener(ipAddress, port);
 
                 // Start listening for incoming connections
