@@ -32,3 +32,4 @@ C:\Users\johnc\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\Me
 C:\Users\johnc\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.exe
 C:\Users\johnc\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.pdb
 C:\Users\salim\Documents\Academics\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.ServerPopUp.resources
+C:\Users\johnc\Documents\GitHub\github-cmpg315-app-project\MessagingAppGoup11\MessagingAppGoup11\obj\Debug\MessagingAppGoup11.ServerPopUp.resources

@@ -86,6 +86,12 @@ namespace MessagingAppGoup11
             lblMyIp.Text = string.Empty;
             lblMyPort.Text = string.Empty;
             rdoPtpChat.Focus();
+
+            lblReceiverIp.Hide();
+            lblReceiverPort.Hide();
+            txtReceiverIp.Hide();
+            txtReceiverPort.Hide();
+            btnStartChat.Hide();
         }
 
         public bool Connect(string serverIP, int serverPort)
@@ -274,6 +280,12 @@ namespace MessagingAppGoup11
             {
                 if (rdoPtpChat.Checked)
                 {
+                    lblReceiverIp.Show();
+                    lblReceiverPort.Show();
+                    txtReceiverIp.Show();
+                    txtReceiverPort.Show();
+                    btnStartChat.Show();
+
                     if (!ptpConnected)
                     {
                         if (gConnected)
@@ -315,6 +327,13 @@ namespace MessagingAppGoup11
             {
                 if (rdoGlobalChat.Checked)
                 {
+                    lblReceiverIp.Hide();
+                    lblReceiverPort.Hide();
+                    txtReceiverIp.Hide();
+                    txtReceiverPort.Hide();
+                    btnStartChat.Hide();
+
+
                     if (!gConnected)
                     {
                         if (ptpConnected)
