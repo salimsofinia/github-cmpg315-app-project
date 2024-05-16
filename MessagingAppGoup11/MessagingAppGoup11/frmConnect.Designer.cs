@@ -66,8 +66,6 @@
             this.lblUsername.Size = new System.Drawing.Size(119, 26);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username:";
-            this.lblUsername.MouseLeave += new System.EventHandler(this.lblUsername_MouseLeave);
-            this.lblUsername.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblUsername_MouseMove);
             // 
             // txtUsername
             // 

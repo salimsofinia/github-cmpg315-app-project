@@ -35,9 +35,19 @@ namespace MessagingAppGoup11
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            ServerIp = txtServerIp.Text;
-            ServerPort = Convert.ToInt32(txtServerPort.Text);
-            this.Close();
+            try
+            {
+                if ((!String.IsNullOrWhiteSpace(txtServerIp.Text) && (!String.IsNullOrWhiteSpace(txtServerPort.Text))))
+                {
+                    ServerIp = txtServerIp.Text;
+                    ServerPort = Convert.ToInt32(txtServerPort.Text);
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

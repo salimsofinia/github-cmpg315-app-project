@@ -47,19 +47,12 @@ namespace MessagingAppGoup11
 
         private void lblUsername_MouseMove(object sender, MouseEventArgs e)
         {
-            //lblHelp.Show();
         }
 
         private void frmConnect_Load(object sender, EventArgs e)
         {
             errorProvider1.Clear();
-            //lblHelp.Hide();
             txtUsername.Focus();
-        }
-
-        private void lblUsername_MouseLeave(object sender, EventArgs e)
-        {
-            //lblHelp.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

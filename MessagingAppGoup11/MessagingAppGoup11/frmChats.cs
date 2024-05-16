@@ -30,15 +30,34 @@ namespace MessagingAppGoup11
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            // check to see if client is connected to a server before trying to send a message.
-            string message = txtMessageBox.Text.Trim();
-            if (message != string.Empty)
+            try
             {
-                if (ptpConnected)
+                // check to see if client is connected to a server before trying to send a message.
+                string message = txtMessageBox.Text.Trim();
+                if (message != string.Empty)
                 {
-                    if (userIP != ptpIP)
+                    if (ptpConnected)
                     {
-                        SendPTPMessage(ptpIP, $"{username}#{message}");
+                        if (userIP != ptpIP)
+                        {
+                            SendPTPMessage(ptpIP, $"{username}#{message}");
+
+                            rtbOutput.Invoke((MethodInvoker)(() =>
+                            {
+                                rtbOutput.SelectionStart = rtbOutput.TextLength;
+                                rtbOutput.SelectionLength = 0;
+
+                                rtbOutput.SelectionColor = Color.DarkGoldenrod;
+                                rtbOutput.SelectedText = $"You: {message}\n";
+                                rtbOutput.SelectionColor = rtbOutput.ForeColor;
+                            }));
+                        }
+                        else MessageBox.Show("Don't do that. Why do you want to message yourself. I'm sorry you dont have friends.");
+
+                    }
+                    else
+                    {
+                        SendGroupMessage($"{username}#{message}");
 
                         rtbOutput.Invoke((MethodInvoker)(() =>
                         {
@@ -50,26 +69,14 @@ namespace MessagingAppGoup11
                             rtbOutput.SelectionColor = rtbOutput.ForeColor;
                         }));
                     }
-                    else MessageBox.Show("Don't do that. Why do you want to message yourself. I'm sorry you dont have friends.");
-
+                    txtMessageBox.Clear();
+                    txtMessageBox.Focus();
+                    rtbOutput.Invoke((MethodInvoker)(() => rtbOutput.ScrollToCaret()));
                 }
-                else
-                {
-                    SendGroupMessage($"{username}#{message}");
-
-                    rtbOutput.Invoke((MethodInvoker)(() =>
-                    {
-                        rtbOutput.SelectionStart = rtbOutput.TextLength;
-                        rtbOutput.SelectionLength = 0;
-
-                        rtbOutput.SelectionColor = Color.DarkGoldenrod;
-                        rtbOutput.SelectedText = $"You: {message}\n";
-                        rtbOutput.SelectionColor = rtbOutput.ForeColor;
-                    }));
-                }
-                txtMessageBox.Clear();
-                txtMessageBox.Focus();
-                rtbOutput.Invoke((MethodInvoker)(() => rtbOutput.ScrollToCaret()));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

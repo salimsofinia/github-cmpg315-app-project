@@ -21,7 +21,7 @@ namespace PTPServer
             clientCount = 0;
             isRunning = true;
         }
-        
+
         public void Start(int port)
         {
             try
@@ -57,7 +57,7 @@ namespace PTPServer
                 Console.WriteLine(ex.Message);
             }
         }
-        
+
         public void Stop()
         {
             try
@@ -71,7 +71,7 @@ namespace PTPServer
                 Console.WriteLine(ex.Message);
             }
         }
-        
+
         private void HandleClient(object obj)
         {
             TcpClient client = obj as TcpClient;
@@ -207,6 +207,7 @@ namespace PTPServer
             return null;
         }
 
+        //uncomment in and execute independantly
         /*static void Main()
         {
             int port = 49785; 

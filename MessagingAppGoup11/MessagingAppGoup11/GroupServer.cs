@@ -154,6 +154,7 @@ namespace GServer
             }
         }
 
+        //uncomment in and execute independantly
         /*static void Main()
         {
             int port = 23223;
