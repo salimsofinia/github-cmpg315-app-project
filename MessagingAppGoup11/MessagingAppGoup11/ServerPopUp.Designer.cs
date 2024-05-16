@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblHeading = new System.Windows.Forms.Label();
             this.lblServerIp = new System.Windows.Forms.Label();
             this.lblServerPort = new System.Windows.Forms.Label();
@@ -36,7 +37,9 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHeading
@@ -78,7 +81,7 @@
             this.txtServerIp.ForeColor = System.Drawing.Color.Black;
             this.txtServerIp.Location = new System.Drawing.Point(215, 74);
             this.txtServerIp.Name = "txtServerIp";
-            this.txtServerIp.Size = new System.Drawing.Size(285, 32);
+            this.txtServerIp.Size = new System.Drawing.Size(413, 32);
             this.txtServerIp.TabIndex = 5;
             // 
             // txtServerPort
@@ -87,7 +90,7 @@
             this.txtServerPort.ForeColor = System.Drawing.Color.Black;
             this.txtServerPort.Location = new System.Drawing.Point(215, 129);
             this.txtServerPort.Name = "txtServerPort";
-            this.txtServerPort.Size = new System.Drawing.Size(285, 32);
+            this.txtServerPort.Size = new System.Drawing.Size(413, 32);
             this.txtServerPort.TabIndex = 6;
             // 
             // btnCancel
@@ -95,7 +98,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnCancel.Location = new System.Drawing.Point(204, 175);
+            this.btnCancel.Location = new System.Drawing.Point(345, 178);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(145, 38);
             this.btnCancel.TabIndex = 8;
@@ -108,7 +111,7 @@
             this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConnect.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnConnect.Location = new System.Drawing.Point(355, 175);
+            this.btnConnect.Location = new System.Drawing.Point(496, 178);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(145, 38);
             this.btnConnect.TabIndex = 9;
@@ -128,8 +131,12 @@
             this.panel1.Controls.Add(this.txtServerIp);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(510, 231);
+            this.panel1.Size = new System.Drawing.Size(660, 231);
             this.panel1.TabIndex = 10;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ServerPopUp
             // 
@@ -137,17 +144,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MessagingAppGoup11.Properties.Resources.ChatBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(534, 261);
+            this.ClientSize = new System.Drawing.Size(684, 261);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(550, 300);
-            this.MinimumSize = new System.Drawing.Size(550, 300);
+            this.MaximumSize = new System.Drawing.Size(700, 300);
+            this.MinimumSize = new System.Drawing.Size(700, 300);
             this.Name = "ServerPopUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Server Details";
             this.Load += new System.EventHandler(this.ServerPopUp_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,5 +170,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

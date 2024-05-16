@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MessagingAppGoup11
 {
@@ -26,6 +27,7 @@ namespace MessagingAppGoup11
         private void ServerPopUp_Load(object sender, EventArgs e)
         { 
             lblHeading.Text = "Enter " + serverType + " IP Address and Port:";
+            txtServerPort.Focus();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -42,6 +44,16 @@ namespace MessagingAppGoup11
                     ServerIp = txtServerIp.Text;
                     ServerPort = Convert.ToInt32(txtServerPort.Text);
                     this.Close();
+                }
+                else if (String.IsNullOrWhiteSpace(txtServerIp.Text))
+                {
+                    errorProvider1.SetError(txtServerIp, "Invalid Server IP.");
+                    txtServerIp.Focus();
+                }
+                else
+                {
+                    errorProvider1.SetError(txtServerPort, "Invalid Server Port.");
+                    txtServerPort.Focus();
                 }
             }
             catch (Exception ex)

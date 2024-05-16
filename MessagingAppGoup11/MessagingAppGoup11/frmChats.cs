@@ -85,6 +85,7 @@ namespace MessagingAppGoup11
             lblUsername.Text = username;
             lblMyIp.Text = string.Empty;
             lblMyPort.Text = string.Empty;
+            rdoPtpChat.Focus();
         }
 
         public bool Connect(string serverIP, int serverPort)
@@ -267,35 +268,38 @@ namespace MessagingAppGoup11
             btnSend_Click(sender, e);
         }
 
-        private void rdoPtpChat_CheckedChanged_1(object sender, EventArgs e)
+        private void rdoPtpChat_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
-                if (!ptpConnected)
+                if (rdoPtpChat.Checked)
                 {
-                    if (gConnected)
+                    if (!ptpConnected)
                     {
-                        Disconnect();
-                        gConnected = false;
-                    }
+                        if (gConnected)
+                        {
+                            Disconnect();
+                            gConnected = false;
+                        }
 
-                    rtbOutput.Clear();
-                    //connect to ptp server
+                        rtbOutput.Clear();
+                        //connect to ptp server
 
-                    ServerPopUp serverDetails = new ServerPopUp("Peer to Peer Chat Server's");
-                    serverDetails.ShowDialog();
+                        ServerPopUp serverDetails = new ServerPopUp("Peer to Peer Chat Server's");
+                        serverDetails.ShowDialog();
 
-                    if (Connect(serverDetails.ServerIp, serverDetails.ServerPort))
-                    {
-                        ptpConnected = true;
-                        lblMyIp.Visible = true;
-                        lblMyPort.Visible = true;
-                        btnSend.Enabled = false;
-                        txtReceiverIp.Focus();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Peer to peer server offline");
+                        if (Connect(serverDetails.ServerIp, serverDetails.ServerPort))
+                        {
+                            ptpConnected = true;
+                            lblMyIp.Visible = true;
+                            lblMyPort.Visible = true;
+                            btnSend.Enabled = false;
+                            txtReceiverIp.Focus();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hmmm. Peer to Peer Chat Server is Offline :(");
+                        }
                     }
                 }
             }
@@ -305,33 +309,39 @@ namespace MessagingAppGoup11
             }
         }
 
-        private void rdoGlobalChat_CheckedChanged_1(object sender, EventArgs e)
+        private void rdoGlobalChat_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
-                if (!gConnected)
+                if (rdoGlobalChat.Checked)
                 {
-                    if (ptpConnected)
+                    if (!gConnected)
                     {
-                        Disconnect();
-                        ptpConnected = false;
-                        ptpIP = string.Empty;
-                        lblMyIp.Visible = false;
-                        lblMyPort.Visible = false;
+                        if (ptpConnected)
+                        {
+                            Disconnect();
+                            ptpConnected = false;
+                            ptpIP = string.Empty;
+                            lblMyIp.Visible = false;
+                            lblMyPort.Visible = false;
+                        }
+
+                        // connect to global/group chat
+                        rtbOutput.Clear();
+
+                        ServerPopUp serverDetails = new ServerPopUp("Global Chat Server's");
+                        serverDetails.ShowDialog();
+
+                        if (Connect(serverDetails.ServerIp, serverDetails.ServerPort))
+                        {
+                            gConnected = true;
+                            btnSend.Enabled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hmmm. Global Chat Server is Offline :(");
+                        }
                     }
-
-                    // connect to global/group chat
-                    rtbOutput.Clear();
-
-                    ServerPopUp serverDetails = new ServerPopUp("Global Chat Server's");
-                    serverDetails.ShowDialog();
-
-                    if (Connect(serverDetails.ServerIp, serverDetails.ServerPort))
-                    {
-                        gConnected = true;
-                        btnSend.Enabled = true;
-                    }
-                    else MessageBox.Show("Global chat server offline");
                 }
             }
             catch (Exception ex)
@@ -340,7 +350,7 @@ namespace MessagingAppGoup11
             }
         }
 
-        private void btnStartChat_Click_1(object sender, EventArgs e)
+        private void btnStartChat_Click(object sender, EventArgs e)
         {
             try
             {

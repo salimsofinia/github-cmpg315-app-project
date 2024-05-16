@@ -151,7 +151,7 @@
             this.rdoPtpChat.TabStop = true;
             this.rdoPtpChat.Text = "Peer to Peer Chat";
             this.rdoPtpChat.UseVisualStyleBackColor = true;
-            this.rdoPtpChat.CheckedChanged += new System.EventHandler(this.rdoPtpChat_CheckedChanged_1);
+            this.rdoPtpChat.CheckedChanged += new System.EventHandler(this.rdoPtpChat_CheckedChanged);
             // 
             // rdoGlobalChat
             // 
@@ -165,7 +165,7 @@
             this.rdoGlobalChat.TabStop = true;
             this.rdoGlobalChat.Text = "Global Chat";
             this.rdoGlobalChat.UseVisualStyleBackColor = true;
-            this.rdoGlobalChat.CheckedChanged += new System.EventHandler(this.rdoGlobalChat_CheckedChanged_1);
+            this.rdoGlobalChat.CheckedChanged += new System.EventHandler(this.rdoGlobalChat_CheckedChanged);
             // 
             // lblSelectChat
             // 
@@ -188,7 +188,7 @@
             this.btnStartChat.TabIndex = 8;
             this.btnStartChat.Text = "Start Chat";
             this.btnStartChat.UseVisualStyleBackColor = false;
-            this.btnStartChat.Click += new System.EventHandler(this.btnStartChat_Click_1);
+            this.btnStartChat.Click += new System.EventHandler(this.btnStartChat_Click);
             // 
             // lblReceiverIp
             // 
