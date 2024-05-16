@@ -206,19 +206,20 @@ namespace PTPServer
 
             return null;
         }
-
-        //uncomment in and execute independantly
-        /*static void Main()
+        /*
+        static void Main()
         {
-            int port = 49785; 
+            int port = 49785; // Replace with the desired port number
             PeerToPeerServer server = new PeerToPeerServer();
             server.Start(port);
 
+            // Keep the server running until a key is pressed
             Console.WriteLine("Press any key to stop the server...");
             Console.ReadKey();
 
             server.Stop();
-        }*/
+        }
+        */
 
     }
 }
