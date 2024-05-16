@@ -17,13 +17,7 @@ namespace MessagingAppGoup11
             InitializeComponent();
         }
 
-        public string username = "";
-
-        private void frmConnect_Enter(object sender, EventArgs e)
-        {
-            errorProvider1.Clear();
-            lblHelp.Hide();
-        }
+        public string Username { get; set; }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
@@ -32,13 +26,12 @@ namespace MessagingAppGoup11
                 if (!String.IsNullOrWhiteSpace(txtUsername.Text))
                 {
                     // Save the username
-                    username = txtUsername.Text;
+                    Username = txtUsername.Text;
 
                     // Create instance of Chats form, pass the username, and show
-                    frmChats chatsForm = new frmChats(username);
+                    frmChats chatsForm = new frmChats(Username);
                     this.Hide();
                     chatsForm.ShowDialog();
-                    this.Show(); // Show this form again after closing frmChats if needed
                 }
                 else
                 {
@@ -52,30 +45,57 @@ namespace MessagingAppGoup11
             }
         }
 
-        private void lblUsername_MouseHover(object sender, EventArgs e)
-        {
-            //lblHelp.Show();
-        }
-
         private void lblUsername_MouseMove(object sender, MouseEventArgs e)
         {
-            lblHelp.Show();
+            //lblHelp.Show();
         }
 
         private void frmConnect_Load(object sender, EventArgs e)
         {
             errorProvider1.Clear();
-            lblHelp.Hide();
+            //lblHelp.Hide();
+            txtUsername.Focus();
         }
 
         private void lblUsername_MouseLeave(object sender, EventArgs e)
         {
-            lblHelp.Hide();
+            //lblHelp.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnJoinWiiChat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!String.IsNullOrWhiteSpace(txtUsername.Text))
+                {
+                    // Save the username
+                    Username = txtUsername.Text;
+
+                    // Create instance of Chats form, pass the username, and show
+                    frmChats chatsForm = new frmChats(Username);
+                    this.Hide();
+                    chatsForm.ShowDialog();
+                }
+                else
+                {
+                    // Show error provider
+                    errorProvider1.SetError(txtUsername, "A username is required!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

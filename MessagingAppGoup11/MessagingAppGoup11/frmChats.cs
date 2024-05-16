@@ -18,8 +18,7 @@ namespace MessagingAppGoup11
             this.username = username;
         }
 
-
-        //AAAAA
+        //
         private bool connected = false;
         private bool gConnected = false;
         private bool ptpConnected = false;
@@ -28,46 +27,6 @@ namespace MessagingAppGoup11
         string ptpIP = string.Empty;
         string username = string.Empty;
         string userIP = "";
-
-
-        public string ServerIp { get; set; }
-        public int ServerPort { get; set; }
-
-        private void frmChats_Deactivate(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Disconnect();
-        }
-
-        private void rdoPtpChat_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!ptpConnected)
-            {
-                if (gConnected)
-                {
-                    Disconnect();
-                    gConnected = false;
-                }
-
-                rtbOutput.Clear();
-                // connect to ptp server/chat
-
-                if (Connect("192.168.1.10", 32332))
-                {
-                    ptpConnected = true;
-                    lblMyIP.Visible = true;
-                    lblMyPort.Visible = true;
-                    btnSend.Enabled = false;
-                    txtReceiverIP.Focus();
-                }
-                else MessageBox.Show("Peer to peer server offline");
-            }
-        }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
@@ -86,7 +45,7 @@ namespace MessagingAppGoup11
                             rtbOutput.SelectionStart = rtbOutput.TextLength;
                             rtbOutput.SelectionLength = 0;
 
-                            rtbOutput.SelectionColor = Color.LightSkyBlue;
+                            rtbOutput.SelectionColor = Color.DarkGoldenrod;
                             rtbOutput.SelectedText = $"You: {message}\n";
                             rtbOutput.SelectionColor = rtbOutput.ForeColor;
                         }));
@@ -103,7 +62,7 @@ namespace MessagingAppGoup11
                         rtbOutput.SelectionStart = rtbOutput.TextLength;
                         rtbOutput.SelectionLength = 0;
 
-                        rtbOutput.SelectionColor = Color.LightSkyBlue;
+                        rtbOutput.SelectionColor = Color.DarkGoldenrod;
                         rtbOutput.SelectedText = $"You: {message}\n";
                         rtbOutput.SelectionColor = rtbOutput.ForeColor;
                     }));
@@ -116,91 +75,11 @@ namespace MessagingAppGoup11
 
         private void frmChats_Load(object sender, EventArgs e)
         {
-            string fileName = "Username.txt";
-
-            if (File.Exists(fileName))
-            {
-                using (StreamReader reader = new StreamReader(fileName))
-                    username = reader.ReadLine();
-                GetUsername(fileName);
-            }
-            else
-            {
-                GetUsername(fileName);
-            }
-
-            lblName.Text = username;
-            lblMyIP.Text = string.Empty;
+            lblUsername.Text = username;
+            lblMyIp.Text = string.Empty;
             lblMyPort.Text = string.Empty;
-
-            // just to test servers locally
-            GroupServer server = new GroupServer();
-            Thread thread = new Thread(() => server.Start(23223));
-            //thread.Start();
-
-            PeerToPeerServer ptpserver = new PeerToPeerServer();
-            Thread ptpthread = new Thread(() => ptpserver.Start(32332));
-            //ptpthread.Start();
         }
 
-        private void rdoGlobalChat_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!gConnected)
-            {
-                if (ptpConnected)
-                {
-                    Disconnect();
-                    ptpConnected = false;
-                    ptpIP = string.Empty;
-                    lblMyIP.Visible = false;
-                    lblMyPort.Visible = false;
-                }
-
-                // connect to global/group chat
-                //34.145.222.43
-                rtbOutput.Clear();
-                if (Connect("196.252.253.250", 23223))
-                {
-                    gConnected = true;
-                    btnSend.Enabled = true;
-                }
-                else MessageBox.Show("Global chat server offline");
-            }
-        }
-
-        private void btnStartChat_Click(object sender, EventArgs e)
-        {
-            if (ptpConnected)
-                if (txtReceiverIP.Text.Trim() != string.Empty)
-                    if (txtReceiverPort.Text.Trim() != string.Empty)
-                    {
-                        if (ptpIP != txtReceiverIP.Text + ":" + txtReceiverPort.Text)
-                        {
-                            rtbOutput.Clear();
-                            ptpIP = txtReceiverIP.Text + ":" + txtReceiverPort.Text;
-                            btnSend.Enabled = true;
-
-                            SendPTPMessage(ptpIP, $"{username} Connected");
-
-                            rtbOutput.Invoke((MethodInvoker)(() =>
-                            {
-
-                                rtbOutput.SelectionStart = rtbOutput.TextLength;
-                                rtbOutput.SelectionAlignment = HorizontalAlignment.Center;
-                                rtbOutput.AppendText($"Connected to { ptpIP}\n");
-                                rtbOutput.SelectionAlignment = HorizontalAlignment.Left;
-                            }));
-
-                            rtbOutput.Invoke((MethodInvoker)(() => rtbOutput.ScrollToCaret()));
-                        }
-                    }
-                    else MessageBox.Show("Enter a Port.");
-                else MessageBox.Show("Enter an IP.");
-            else MessageBox.Show("Please connect to PTP server first.");
-        }
-
-
-        //AAAAA
         public bool Connect(string serverIP, int serverPort)
         {
             try
@@ -274,7 +153,6 @@ namespace MessagingAppGoup11
                 // connect to socket/network stream
                 NetworkStream networkStream = clientSocket.GetStream();
 
-                //CCCCC
                 frmChats p = obj as frmChats;
 
                 while (connected)
@@ -304,7 +182,7 @@ namespace MessagingAppGoup11
                                 string ip = ipItems[0];
                                 string port = ipItems[1];
                                 userIP = $"{ip}:{port}";
-                                p.Invoke((MethodInvoker)(() => p.lblMyIP.Text = $"Your IP: {ip}"));
+                                p.Invoke((MethodInvoker)(() => p.lblMyIp.Text = $"Your IP: {ip}"));
                                 p.Invoke((MethodInvoker)(() => p.lblMyPort.Text = $"Your Port: {port}"));
                             }
                             else
@@ -343,7 +221,6 @@ namespace MessagingAppGoup11
 
                         }));
                         rtbOutput.Invoke((MethodInvoker)(() => rtbOutput.ScrollToCaret()));
-
                     }
 
                 }
@@ -354,14 +231,13 @@ namespace MessagingAppGoup11
             }
         }
 
-
         public void Disconnect()
         {
             if (connected)
             {
                 try
                 {
-                    // disconnect from sockets, join running thread and change needed boolean values
+                    // disconnect from sockets, join running thread and ge needed boolean values
                     clientSocket.GetStream().Close();
                     clientSocket.Close();
                     clientSocket = null;
@@ -379,20 +255,119 @@ namespace MessagingAppGoup11
             }
         }
 
-        private void GetUsername(string filename)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            while (username.Trim() == string.Empty || username.Length > 15)
+            btnSend_Click(sender, e);
+        }
+
+        private void rdoPtpChat_CheckedChanged_1(object sender, EventArgs e)
+        {
+            try
             {
-                if (username.Length > 15) MessageBox.Show("Max username length is 15 characters");
-                frmConnect frm = new frmConnect();
-                frm.ShowDialog();
-
-                username = frm.username;
-
-                using (StreamWriter writer = new StreamWriter(filename, false))
+                if (!ptpConnected)
                 {
-                    writer.WriteLine(username);
+                    if (gConnected)
+                    {
+                        Disconnect();
+                        gConnected = false;
+                    }
+
+                    rtbOutput.Clear();
+                    //connect to ptp server
+
+                    ServerPopUp serverDetails = new ServerPopUp("Peer to Peer Chat Server's");
+                    serverDetails.ShowDialog();
+
+                    if (Connect(serverDetails.ServerIp, serverDetails.ServerPort))
+                    {
+                        ptpConnected = true;
+                        lblMyIp.Visible = true;
+                        lblMyPort.Visible = true;
+                        btnSend.Enabled = false;
+                        txtReceiverIp.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Peer to peer server offline");
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void rdoGlobalChat_CheckedChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!gConnected)
+                {
+                    if (ptpConnected)
+                    {
+                        Disconnect();
+                        ptpConnected = false;
+                        ptpIP = string.Empty;
+                        lblMyIp.Visible = false;
+                        lblMyPort.Visible = false;
+                    }
+
+                    // connect to global/group chat
+                    rtbOutput.Clear();
+
+                    ServerPopUp serverDetails = new ServerPopUp("Global Chat Server's");
+                    serverDetails.ShowDialog();
+
+                    if (Connect(serverDetails.ServerIp, serverDetails.ServerPort))
+                    {
+                        gConnected = true;
+                        btnSend.Enabled = true;
+                    }
+                    else MessageBox.Show("Global chat server offline");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnStartChat_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ptpConnected)
+                    if (txtReceiverIp.Text.Trim() != string.Empty)
+                        if (txtReceiverPort.Text.Trim() != string.Empty)
+                        {
+                            if (ptpIP != txtReceiverIp.Text + ":" + txtReceiverPort.Text)
+                            {
+                                rtbOutput.Clear();
+                                ptpIP = txtReceiverIp.Text + ":" + txtReceiverPort.Text;
+                                btnSend.Enabled = true;
+
+                                SendPTPMessage(ptpIP, $"{username} Connected");
+
+                                rtbOutput.Invoke((MethodInvoker)(() =>
+                                {
+
+                                    rtbOutput.SelectionStart = rtbOutput.TextLength;
+                                    rtbOutput.SelectionAlignment = HorizontalAlignment.Center;
+                                    rtbOutput.AppendText($"Connected to {ptpIP}\n");
+                                    rtbOutput.SelectionAlignment = HorizontalAlignment.Left;
+                                }));
+
+                                rtbOutput.Invoke((MethodInvoker)(() => rtbOutput.ScrollToCaret()));
+                            }
+                        }
+                        else MessageBox.Show("Enter a Port.");
+                    else MessageBox.Show("Enter an IP.");
+                else MessageBox.Show("Please connect to PTP server first.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

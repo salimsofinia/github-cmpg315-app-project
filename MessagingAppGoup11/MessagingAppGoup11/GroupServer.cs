@@ -18,8 +18,8 @@ namespace GServer
 
         public GroupServer()
         {
-            clients = new TcpClient[100]; // Maximum 100 clients
-            clientThreads = new Thread[100]; // Maximum 100 threads
+            clients = new TcpClient[100]; // maximum 100 clients
+            clientThreads = new Thread[100]; // maximum 100 threads
             isRunning = true;
             clientCount = 0;
         }
@@ -156,11 +156,10 @@ namespace GServer
 
         /*static void Main()
         {
-            int port = 23223; // Replace with the desired port number
+            int port = 23223;
             GroupServer server = new GroupServer();
             server.Start(port);
 
-            // Keep the server running until a key is pressed
             Console.WriteLine("Press any key to stop the server...");
             Console.ReadKey();
 

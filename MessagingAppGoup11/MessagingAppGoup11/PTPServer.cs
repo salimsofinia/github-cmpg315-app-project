@@ -21,7 +21,7 @@ namespace PTPServer
             clientCount = 0;
             isRunning = true;
         }
-
+        
         public void Start(int port)
         {
             try
@@ -57,7 +57,7 @@ namespace PTPServer
                 Console.WriteLine(ex.Message);
             }
         }
-
+        
         public void Stop()
         {
             try
@@ -71,7 +71,7 @@ namespace PTPServer
                 Console.WriteLine(ex.Message);
             }
         }
-
+        
         private void HandleClient(object obj)
         {
             TcpClient client = obj as TcpClient;
@@ -209,11 +209,10 @@ namespace PTPServer
 
         /*static void Main()
         {
-            int port = 32332; // Replace with the desired port number
+            int port = 49785; 
             PeerToPeerServer server = new PeerToPeerServer();
             server.Start(port);
 
-            // Keep the server running until a key is pressed
             Console.WriteLine("Press any key to stop the server...");
             Console.ReadKey();
 

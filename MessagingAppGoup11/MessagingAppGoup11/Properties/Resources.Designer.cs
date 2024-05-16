@@ -63,9 +63,49 @@ namespace MessagingAppGoup11.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatBackground {
+            get {
+                object obj = ResourceManager.GetObject("ChatBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SendIcon {
+            get {
+                object obj = ResourceManager.GetObject("SendIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SendIcon3 {
+            get {
+                object obj = ResourceManager.GetObject("SendIcon3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WiiChat {
             get {
                 object obj = ResourceManager.GetObject("WiiChat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WiiChat2 {
+            get {
+                object obj = ResourceManager.GetObject("WiiChat2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
